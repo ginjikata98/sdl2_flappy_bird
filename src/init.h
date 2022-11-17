@@ -7,6 +7,6 @@
 
 #include "structs.h"
 
-App initSDL(void);
+App *initSDL(void);
 
 #endif //FLAPPY_BIRD_INIT_H
