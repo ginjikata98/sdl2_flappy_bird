@@ -6,7 +6,9 @@
 #include "defs.h"
 
 
-void initSDL(App app) {
+App initSDL(void) {
+  App app;
+
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     printf("Couldn't initialize SDL: %s\n", SDL_GetError());
     exit(1);
@@ -29,4 +31,6 @@ void initSDL(App app) {
     printf("Failed to create renderer: %s\n", SDL_GetError());
     exit(1);
   }
+
+  return app;
 }

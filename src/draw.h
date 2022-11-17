@@ -7,8 +7,8 @@
 
 #include "structs.h"
 
-void prepareScene(App app);
+void prepareScene(App *app);
 
-void presentScene(App app);
+void presentScene(App *app);
 
 #endif //FLAPPY_BIRD_DRAW_H

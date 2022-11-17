@@ -10,20 +10,16 @@
 
 
 int main(int argc, char *argv[]) {
-  App app;
-
-  memset(&app, 0, sizeof(App));
-
-  initSDL(app);
+  App app = initSDL();
 
 //  atexit(cleanup);
 
   while (true) {
-    prepareScene(app);
+    prepareScene(&app);
 
     handleInput();
 
-    presentScene(app);
+    presentScene(&app);
 
     SDL_Delay(16);
   }
