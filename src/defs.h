@@ -5,4 +5,7 @@
 #ifndef FLAPPY_BIRD_DEFS_H
 #define FLAPPY_BIRD_DEFS_H
 
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
+
 #endif //FLAPPY_BIRD_DEFS_H

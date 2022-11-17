@@ -5,4 +5,8 @@
 #ifndef FLAPPY_BIRD_INIT_H
 #define FLAPPY_BIRD_INIT_H
 
+#include "structs.h"
+
+void initSDL(App app);
+
 #endif //FLAPPY_BIRD_INIT_H
