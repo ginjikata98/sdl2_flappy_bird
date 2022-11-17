@@ -8,7 +8,7 @@ void prepareScene(App *app) {
   SDL_SetRenderDrawColor(app->renderer, 255, 255, 255, 255);
   SDL_RenderClear(app->renderer);
 
-  SDL_RenderCopy(app->renderer, app->background->texture, NULL, NULL);
+  Texture_render(app->background, app->renderer, 0, 0);
 }
 
 void presentScene(App *app) {

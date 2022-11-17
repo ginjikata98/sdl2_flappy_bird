@@ -25,21 +25,20 @@ void Texture_destroy(Texture *texture) {
 
 Texture *Texture_loadFromFile(SDL_Renderer *renderer, char *path) {
   Texture *texture = Texture_init();
-  SDL_Texture *newTexture = NULL;
 
-  SDL_Surface *loadedSurface = IMG_Load(path);
-  if (loadedSurface == NULL) {
-    printf("Unable to load image %s! SDL_image Error: %s\n", path, IMG_GetError());
-  } else {
-    newTexture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
-    if (newTexture == NULL) {
-      printf("Unable to create texture from %s! SDL Error: %s\n", path, SDL_GetError());
-    }
+  SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "Loading %s", path);
 
-    SDL_FreeSurface(loadedSurface);
-  }
-
-  texture->texture = newTexture;
-
+  texture->texture = IMG_LoadTexture(renderer, path);
   return texture;
 }
+
+void Texture_render(Texture *texture, SDL_Renderer *renderer, int x, int y) {
+  SDL_Rect dest;
+  dest.x = x;
+  dest.y = y;
+  dest.w = texture->width;
+  dest.h = texture->height;
+  SDL_QueryTexture(texture->texture, NULL, NULL, &dest.w, &dest.h);
+  SDL_RenderCopy(renderer, texture->texture, NULL, &dest);
+}
+
