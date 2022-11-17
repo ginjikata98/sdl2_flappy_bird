@@ -10,6 +10,7 @@
 typedef struct {
   SDL_Renderer *renderer;
   SDL_Window *window;
+  SDL_Texture *background;
 } App;
 
 #endif //FLAPPY_BIRD_STRUCTS_H
