@@ -77,7 +77,7 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
 void gameRender(Game *g) {
   SDL_RenderClear(g->renderer);
 
-  SDL_RenderCopy(g->renderer, g->texture, &g->srcRect, &g->destRect);
+  SDL_RenderCopyEx(g->renderer, g->texture, &g->srcRect, &g->destRect, 0, 0, SDL_FLIP_HORIZONTAL);
 
   SDL_RenderPresent(g->renderer);
 }
