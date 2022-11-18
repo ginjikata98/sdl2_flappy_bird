@@ -1,20 +1,19 @@
-
 #include "game.h"
 
-game *g_game = 0;
+Game *game = 0;
 
 int main(int argc, char *argv[]) {
 
-  g_game = gameNew();
+  game = gameNew();
 
-  gameInit(g_game, "Chapter 1", 100, 100, 640, 580, true);
+  gameInit(game, "Chapter 1", 100, 100, 640, 580, true);
 
-  while (gameIsRunning(g_game)) {
-    gameHandleEvents(g_game);
-    gameUpdate(g_game);
-    gameRender(g_game);
+  while (gameIsRunning(game)) {
+    gameHandleEvents(game);
+    gameUpdate(game);
+    gameRender(game);
   }
-  gameClean(g_game);
+  gameClean(game);
   return 0;
 }
 

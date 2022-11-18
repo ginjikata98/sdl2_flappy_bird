@@ -11,13 +11,13 @@ struct Game {
   bool running;
 };
 
-game *gameNew(void) {
-  game *g = malloc(sizeof(game));
+Game *gameNew(void) {
+  Game *g = malloc(sizeof(Game));
   g->running = false;
   return g;
 }
 
-bool gameInit(game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen) {
+bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen) {
   if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
     printf("Couldn't initialize SDL: %s\n", SDL_GetError());
     return false;
@@ -52,25 +52,25 @@ bool gameInit(game *g, const char *title, int xPosition, int yPosition, int widt
   return true;
 }
 
-void gameRender(game *g) {
+void gameRender(Game *g) {
   SDL_RenderClear(g->renderer);
 
   SDL_RenderPresent(g->renderer);
 }
 
 
-void gameClean(game *g) {
-  printf("cleaning game...\n");
+void gameClean(Game *g) {
+  printf("cleaning Game...\n");
   SDL_DestroyWindow(g->window);
   SDL_DestroyRenderer(g->renderer);
   SDL_Quit();
 }
 
-bool gameIsRunning(game *g) {
+bool gameIsRunning(Game *g) {
   return g->running;
 }
 
-void gameHandleEvents(game *g) {
+void gameHandleEvents(Game *g) {
   SDL_Event event;
 
   if (SDL_PollEvent(&event)) {
@@ -85,6 +85,6 @@ void gameHandleEvents(game *g) {
   }
 }
 
-void gameUpdate(game *g) {
+void gameUpdate(Game *g) {
 
 }
