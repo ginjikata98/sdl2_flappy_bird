@@ -19,7 +19,9 @@ Game *gameNew(void) {
 
 bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen) {
   if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-    printf("Couldn't initialize SDL: %s\n", SDL_GetError());
+    SDL_LogMessage(SDL_LOG_CATEGORY_ERROR, SDL_LOG_PRIORITY_ERROR,
+                   "Couldn't initialize SDL: %s",
+                   SDL_GetError());
     return false;
   }
 
@@ -27,7 +29,10 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
   g->window = SDL_CreateWindow(title, xPosition, yPosition, width, height, flags);
 
   if (!g->window) {
-    printf("Failed to open %d x %d window: %s\n", width, height, SDL_GetError());
+    SDL_LogMessage(SDL_LOG_CATEGORY_ERROR, SDL_LOG_PRIORITY_ERROR,
+                   "Failed to open %d x %d window: %s",
+                   width, height, SDL_GetError());
+
     return false;
   }
 
@@ -36,7 +41,9 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
   g->renderer = SDL_CreateRenderer(g->window, -1, SDL_RENDERER_ACCELERATED);
 
   if (!g->renderer) {
-    printf("Failed to create renderer: %s\n", SDL_GetError());
+    SDL_LogMessage(SDL_LOG_CATEGORY_ERROR, SDL_LOG_PRIORITY_ERROR,
+                   "Failed to create renderer: %s",
+                   SDL_GetError());
     return false;
   }
 
@@ -44,7 +51,9 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
 
 
   if (IMG_Init(IMG_INIT_PNG) == 0) {
-    printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+    SDL_LogMessage(SDL_LOG_CATEGORY_ERROR, SDL_LOG_PRIORITY_ERROR,
+                   "SDL_image could not initialize! SDL_image Error: %s",
+                   IMG_GetError());
     return false;
   }
 
@@ -61,6 +70,8 @@ void gameRender(Game *g) {
 
 void gameClean(Game *g) {
   printf("cleaning Game...\n");
+  SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO,
+                 "Cleaning Game...");
   SDL_DestroyWindow(g->window);
   SDL_DestroyRenderer(g->renderer);
   SDL_Quit();
