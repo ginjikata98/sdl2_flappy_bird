@@ -9,6 +9,9 @@ struct Game {
   SDL_Window *window;
   SDL_Renderer *renderer;
   bool running;
+  SDL_Texture *texture;
+  SDL_Rect srcRect; // the first rectangle
+  SDL_Rect destRect; // another rectangle
 };
 
 Game *gameNew(void) {
@@ -47,7 +50,7 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
     return false;
   }
 
-  SDL_SetRenderDrawColor(g->renderer, 255, 255, 255, 255);
+  SDL_SetRenderDrawColor(g->renderer, 0, 0, 0, 0);
 
 
   if (IMG_Init(IMG_INIT_PNG) == 0) {
@@ -57,6 +60,16 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
     return false;
   }
 
+  g->texture = IMG_LoadTexture(g->renderer, "assets/platform/char9.png");
+  g->srcRect.x = 0;
+  g->srcRect.y = 0;
+  g->srcRect.w = 128;
+  g->srcRect.h = 200;
+  g->destRect.x = 0;
+  g->destRect.y = 0;
+  g->destRect.w = g->srcRect.w;
+  g->destRect.h = g->srcRect.h;
+
   g->running = true;
   return true;
 }
@@ -64,12 +77,13 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
 void gameRender(Game *g) {
   SDL_RenderClear(g->renderer);
 
+  SDL_RenderCopy(g->renderer, g->texture, &g->srcRect, &g->destRect);
+
   SDL_RenderPresent(g->renderer);
 }
 
 
 void gameClean(Game *g) {
-  printf("cleaning Game...\n");
   SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO,
                  "Cleaning Game...");
   SDL_DestroyWindow(g->window);
@@ -97,5 +111,7 @@ void gameHandleEvents(Game *g) {
 }
 
 void gameUpdate(Game *g) {
-
+  int frame = (int) ((SDL_GetTicks() / 100) % 6);
+  g->srcRect.x = 128 * (frame % 4);
+//  g->srcRect.y = 200 * (frame / 4);
 }

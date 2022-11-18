@@ -14,8 +14,11 @@ typedef struct Texture {
 } Texture;
 
 Texture *Texture_init();
+
 void Texture_destroy(Texture *texture);
+
 Texture *Texture_loadFromFile(SDL_Renderer *renderer, char *path);
+
 void Texture_render(Texture *texture, SDL_Renderer *renderer, int x, int y);
 
 #endif //FLAPPY_BIRD_TEXTURE_H
