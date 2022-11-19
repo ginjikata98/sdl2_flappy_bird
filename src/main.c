@@ -1,36 +1,15 @@
 #include "game.h"
 
-Game *game = 0;
-
 int main(int argc, char *argv[]) {
+  Game *game = GameNew();
 
-  game = gameNew();
+  GameInit(game, "Chapter 1", 100, 100, 640, 580, false);
 
-  gameInit(game, "Chapter 1", 100, 100, 640, 580, false);
-
-  while (gameIsRunning(game)) {
-    gameHandleEvents(game);
-    gameUpdate(game);
-    gameRender(game);
+  while (GameIsRunning(game)) {
+    GameHandleEvents(game);
+    GameUpdate(game);
+    GameRender(game);
   }
-  gameClean(game);
+  GameClean(game);
   return 0;
 }
-
-//int main(int argc, char *argv[]) {
-//  App *app = initSDL();
-//
-////  atexit(cleanup);
-//
-//  while (true) {
-//    prepareScene(app);
-//
-//    handleInput();
-//
-//    presentScene(app);
-//
-//    SDL_Delay(16);
-//  }
-//
-//  return 0;
-//}

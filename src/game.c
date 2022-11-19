@@ -14,13 +14,13 @@ struct Game {
   SDL_Rect destRect; // another rectangle
 };
 
-Game *gameNew(void) {
+Game *GameNew(void) {
   Game *g = malloc(sizeof(Game));
   g->running = false;
   return g;
 }
 
-bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen) {
+bool GameInit(Game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen) {
   if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
     SDL_LogMessage(SDL_LOG_CATEGORY_ERROR, SDL_LOG_PRIORITY_ERROR,
                    "Couldn't initialize SDL: %s",
@@ -74,7 +74,7 @@ bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
   return true;
 }
 
-void gameRender(Game *g) {
+void GameRender(Game *g) {
   SDL_RenderClear(g->renderer);
 
   SDL_RenderCopyEx(g->renderer, g->texture, &g->srcRect, &g->destRect, 0, 0, SDL_FLIP_HORIZONTAL);
@@ -83,7 +83,7 @@ void gameRender(Game *g) {
 }
 
 
-void gameClean(Game *g) {
+void GameClean(Game *g) {
   SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO,
                  "Cleaning Game...");
   SDL_DestroyWindow(g->window);
@@ -91,11 +91,11 @@ void gameClean(Game *g) {
   SDL_Quit();
 }
 
-bool gameIsRunning(Game *g) {
+bool GameIsRunning(Game *g) {
   return g->running;
 }
 
-void gameHandleEvents(Game *g) {
+void GameHandleEvents(Game *g) {
   SDL_Event event;
 
   if (SDL_PollEvent(&event)) {
@@ -110,8 +110,7 @@ void gameHandleEvents(Game *g) {
   }
 }
 
-void gameUpdate(Game *g) {
+void GameUpdate(Game *g) {
   int frame = (int) ((SDL_GetTicks() / 100) % 6);
   g->srcRect.x = 128 * (frame % 4);
-//  g->srcRect.y = 200 * (frame / 4);
 }

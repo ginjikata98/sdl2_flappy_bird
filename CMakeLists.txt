@@ -12,8 +12,8 @@ find_package(SDL2_IMAGE REQUIRED)
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
 
 include_directories(
-        /Library/Frameworks/SDL2_image.framework/Headers
         /Library/Frameworks/SDL2.framework/Headers
+        /Library/Frameworks/SDL2_image.framework/Headers
 )
 
 target_link_libraries(

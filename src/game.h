@@ -14,19 +14,19 @@
 
 typedef struct Game Game;
 
-Game *gameNew(void);
+Game *GameNew(void);
 
-bool gameInit(Game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen);
+bool GameInit(Game *g, const char *title, int xPosition, int yPosition, int width, int height, bool fullscreen);
 
-void gameRender(Game *g);
+void GameRender(Game *g);
 
-void gameUpdate(Game *g);
+void GameUpdate(Game *g);
 
-void gameHandleEvents(Game *g);
+void GameHandleEvents(Game *g);
 
-void gameClean(Game *g);
+void GameClean(Game *g);
 
-bool gameIsRunning(Game *g);
+bool GameIsRunning(Game *g);
 
 
 #endif //FLAPPY_BIRD_GAME_H
