@@ -1,0 +1,1 @@
+cmake --build /Users/mac/project/games/sdl2_flappy_bird/cmake-build-debug --target flappy_bird -- -j 6
