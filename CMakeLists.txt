@@ -14,10 +14,10 @@ find_package(SDL2_TTF REQUIRED)
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
 
 include_directories(
-        ./deps/SDL2.framework
-        ./deps/SDL2_image.framework
-        ./deps/SDL2_mixer.framework
-        ./deps/SDL2_ttf.framework
+        ${SDL2_INCLUDE_DIRS}
+        ${SDL2_MIXER_INCLUDE_DIRS}
+        ${SDL2_IMAGE_INCLUDE_DIRS}
+        ${SDL2_TTF_INCLUDE_DIRS}
 )
 
 target_link_libraries(
