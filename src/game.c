@@ -60,6 +60,14 @@ bool GameInit(Game *g, const char *title, int xPosition, int yPosition, int widt
     return false;
   }
 
+  TTF_Init();
+  if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1) {
+    printf("Couldn't initialize SDL Mixer\n");
+    exit(1);
+  }
+
+  Mix_AllocateChannels(8);
+
   g->texture = IMG_LoadTexture(g->renderer, "assets/platform/char9.png");
   g->srcRect.x = 0;
   g->srcRect.y = 0;
