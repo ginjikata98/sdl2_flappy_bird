@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.23)
 project(flappy_bird C)
 
 set(CMAKE_C_STANDARD 99)
-#set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
 FILE(GLOB SOURCE_FILES src/*.h src/*.c)
 
@@ -15,13 +14,16 @@ find_package(SDL2_TTF REQUIRED)
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
 
 include_directories(
-        ${SDL2_INCLUDE_DIRS}
+        /Library/Frameworks/SDL2.framework/Headers
+        /Library/Frameworks/SDL2_image.framework/Headers
+        /Library/Frameworks/SDL2_ttf.framework/Headers
+        /Library/Frameworks/SDL2_mixer.framework/Headers
 )
 
 target_link_libraries(
         ${PROJECT_NAME}
-        SDL2::SDL2
-        SDL2_image
-        SDL2_ttf
-        SDL2_mixer
+        /Library/Frameworks/SDL2.framework/Versions/A/SDL2
+        /Library/Frameworks/SDL2_image.framework/Versions/A/SDL2_image
+        /Library/Frameworks/SDL2_ttf.framework/Versions/A/SDL2_ttf
+        /Library/Frameworks/SDL2_mixer.framework/Versions/A/SDL2_mixer
 )
