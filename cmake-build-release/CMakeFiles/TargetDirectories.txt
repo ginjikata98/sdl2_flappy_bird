@@ -1,3 +1,0 @@
-/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/CMakeFiles/flappy_bird.dir
-/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/CMakeFiles/edit_cache.dir
-/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/CMakeFiles/rebuild_cache.dir
