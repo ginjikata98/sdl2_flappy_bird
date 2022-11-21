@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.23)
 project(flappy_bird C)
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+#set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
 FILE(GLOB SOURCE_FILES src/*.h src/*.c)
 
-add_executable(flappy_bird ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 find_package(SDL2 REQUIRED CONFIG REQUIRED COMPONENTS SDL2)
 find_package(SDL2_IMAGE REQUIRED)
 find_package(SDL2_MIXER REQUIRED)
