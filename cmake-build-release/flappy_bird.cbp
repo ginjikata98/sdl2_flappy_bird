@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="flappy_bird"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_image\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_mixer\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_ttf\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="flappy_bird">
+				<Option output="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/flappy_bird" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL2"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 flappy_bird"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="flappy_bird/fast">
+				<Option output="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/flappy_bird" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/SDL2"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 flappy_bird/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/project/games/sdl2_flappy_bird/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/src/game.c">
+			<Option target="flappy_bird"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/src/game.h">
+			<Option target="flappy_bird"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/src/main.c">
+			<Option target="flappy_bird"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/src/texture.c">
+			<Option target="flappy_bird"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/src/texture.h">
+			<Option target="flappy_bird"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2_image/sdl2_image-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_image\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2_image/sdl2_image-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_image\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2_mixer/sdl2_mixer-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_mixer\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2_mixer/sdl2_mixer-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_mixer\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2_ttf/sdl2_ttf-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_ttf\"/>
+		</Unit>
+		<Unit filename="/Users/mac/project/games/sdl2_flappy_bird/../../../../../usr/local/lib/cmake/SDL2_ttf/sdl2_ttf-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SDL2_ttf\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -5,7 +5,7 @@
 #ifndef FLAPPY_BIRD_TEXTURE_H
 #define FLAPPY_BIRD_TEXTURE_H
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 typedef struct Texture {
   SDL_Texture *texture;
